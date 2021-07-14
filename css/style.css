@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* -------------------
+Banner design section
+----------------------*/
+.banner{
+    background-color: #2D25A0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+}
+
+.banner-text{
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    padding-left: 100px;
+    padding-top: 110px;
+    line-height: 80px;
+    
+}
+
+.live-button{
+    width: 168px;
+    height: 44px;
+    text-decoration: none;
+    background-color: #E02C6D;
+    margin-left: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-weight: 600px;
+}
+
+.banner-right img{
+    width: 80%;
+    padding-top: 100px;
+    padding-left: 30px;
+}
+
+.banner-right img:hover{
+    transform: rotate(45deg)
+}
+
+.banner-right img{
+    transition: transform 3s ease-in-out;
+}
+/* ------------------
+    players section
+    ---------------- */
+
+.players{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 20px;
+    justify-items:center;
+    padding-left: 200px;
+    padding-right: 200px;
+    /* align-items: center; */
+}
+.player{
+    width: 330px;
+    height: 474px;
+    box-shadow: #6C6C6C 5px 5px 15px;
+    margin-bottom: 20px;
+}
+
+.player .player-info img{
+    width: 300px;
+    height: 256px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+.player-name{
+    font-size: 26px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.player-info p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* ----------------
+tournaments section 
+------------------ */
+
+.tournament-title{
+    text-align: center;
+    color: rgb(44, 93, 95);
+    font-size: 48px;
+    margin-top: 60px;
+}
+.tournaments{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 200px;
+    padding-right: 200px;
+    grid-row-gap: 20px;
+}
+.tournament{
+    width: 330px;
+    height: 474px;
+    box-shadow: #6C6C6C 5px 5px 20px;
+}
+
+.tournament-banner img{
+    width: 300px;
+    height: 256px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.tournament-details h4{
+    text-align: center;
+}
+.tournament-place{
+    text-align: center;
+    color: rgb(134, 76, 76);
+}
+.fa-clock{
+    padding-left: 120px;
+    color: rgb(163, 53, 53);
+}
+/* ---------------
+football cup winner
+---------------- */
+.winner-title{
+    text-align: center;
+    color: rgb(121, 142, 143);
+    font-size: 48px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+.winner{
+    display: grid;
+    background-color: #e7e1e1;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    border-radius: 20px;
+}
+.winner-image img{
+    width: 80%;
+    padding-top: 100px;
+    padding-left: 30px;
+    border: violet;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+.winner-text{
+    color: rgb(29, 26, 26);
+    padding-top: 110px;
+    padding-right: 10px;
+    
+}
+
+/* ---------------
+   Footer style
+---------------- */
+
+footer{
+    margin-bottom: 40px;
+}
+.footer-section{
+    width: 100%;
+    height: 213px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.footer-logo{
+    margin: auto;
+    width: 50%;
+}
+.footer-logo img{
+    width: 80%;
+    height: 90px;
+}
+.social-link{
+    font-size: 25px;
+    padding-top: 30px;
+    text-align: center;
+}
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-instagram-square{
+    color:#e95950;
+}
+.fa-twitter-square{
+    color: #1DA1F2;
+}
+.fa-youtube-square{
+    color: #FF0000;
+}
+.link{
+    padding-left: 10px;
+}
+.footer-section p{
+    font-size: 16px;
+    text-align: center;
+}
+
+/*-----------------
+ Media queires
+----------------- */
+
+/* Mobile device */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .tournament-text{
+        width: 100%;
+    }
+    .winner-text{
+        width: 100%;
+    }
+
+    .banner, .players, .tournaments,.winner, .footer-section {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .player, .tournament,.winner .footer-logo, .social-link {
+        flex-direction: column;
+    }
+
+}
+
+/* Tablet device */
+
+@media only screen and (min-width:688px) and (max-width:992px)  {
+    .container{
+        width: 100%;
+    }
+    .tournament-text{
+        width: 100%;
+    }
+    .winner-text{
+        width: 100%;
+    }
+    .banner, .players, .tournaments,.winner, .footer-section {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .player, .tournament,.winner, .footer-logo, .social-link {
+        flex-direction: column;
+    }
+
+}
